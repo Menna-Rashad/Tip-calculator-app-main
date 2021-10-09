@@ -1,44 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Tip calculator app</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Frontend Mentor | Tip calculator app</title>
 
-  Bill
-
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
-
-  Number of People
-
-  Tip Amount
-  / person
-
-  Total
-  / person
-
-  Reset
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <link rel="stylesheet" href="./styles/root.css" />
+    <link rel="stylesheet" href="./styles/mobile.css" />
+    <link rel="stylesheet" href="./styles/desktop.css" />
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 2%, 51%);
+      }
+    </style>
+    <script
+      src="https://kit.fontawesome.com/1722454a25.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>splitter</h1>
+      <div class="wrapper">
+        <form action="#0">
+          <div class="inputWrapper">
+            <label for="bill" class="mainLabel">bill</label>
+            <div class="inputInnerwrapper">
+              <span>$</span>
+              <input
+                type="text"
+                name="bill"
+                id="bill"
+                pattern=""
+                placeholder="0"
+                autocomplete="off"
+              />
+            </div>
+          </div>
+          <div class="selection">
+            <label for="tip" class="mainLabel">select tip %</label>
+            <div class="selectionGroup">
+              <input type="radio" name="ratio" id="five" value="5" />
+              <label for="five">5%</label>
+              <input type="radio" name="ratio" id="ten" value="10" />
+              <label for="ten">10%</label>
+              <input type="radio" name="ratio" id="fifteen" value="15" />
+              <label for="fifteen">15%</label>
+              <input type="radio" name="ratio" id="twentyFive" value="25" />
+              <label for="twentyFive">25%</label>
+              <input type="radio" name="ratio" id="fifty" value="50" />
+              <label for="fifty">50%</label>
+              <input
+                type="text"
+                placeholder="custom"
+                name="ratio"
+                id="tipInput"
+                autocomplete="off"
+              />
+            </div>
+          </div>
+          <div class="inputWrapper">
+            <div id="pplNum">
+              <label for="num" class="mainLabel">number of people</label>
+              <span>Can't be zero</span>
+            </div>
+            <div class="inputInnerwrapper">
+              <span><i class="fas fa-user"></i></span>
+              <input
+                type="text"
+                name="bill"
+                id="bill"
+                pattern=""
+                placeholder="0"
+                autocomplete="off"
+              />
+            </div>
+          </div>
+        </form>
+        <div class="output">
+          <div class="info">
+            <div class="title">
+              <p>tip amount</p>
+              <span>/ person</span>
+            </div>
+            <p class="result">$0.00</p>
+          </div>
+          <div class="info">
+            <div class="title">
+              <p>total</p>
+              <span>/ person</span>
+            </div>
+            <p class="result">$0.00</p>
+          </div>
+          <button type="reset" id="reset">reset</button>
+        </div>
+      </div>
+    </div>
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a href="https://github.com/Menna-Rashad" target="_blank">Menna Rashad</a
+      >.
+    </footer>
+    <script src="scripts/app.js"></script>
+  </body>
 </html>

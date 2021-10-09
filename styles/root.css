@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+
+/* font weight 500 is not available */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  overflow-x: hidden;
+  background-color: #c5e4e7;
+  font-size: 24px;
+  font-family: "Space Mono", monospace;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+input {
+  outline: none;
+  border: none;
+}
+:root {
+  /* primary colors */
+  --Strong-cyan: hsl(172, 67%, 45%);
+  /* neutral colors */
+  --Very-dark-cyan: hsl(183, 100%, 15%);
+  --Dark-grayish-cyan: hsl(186, 14%, 43%);
+  --Dark-grayish-cyan-second: hsl(184, 14%, 56%);
+  --Light-grayish-cyan: hsl(185, 41%, 84%);
+  --Light-grayish-cyan-second: hsl(189, 41%, 97%);
+  --White: hsl(0, 0%, 100%);
+}
