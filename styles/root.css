@@ -34,4 +34,6 @@ input {
   --Light-grayish-cyan: hsl(185, 41%, 84%);
   --Light-grayish-cyan-second: hsl(189, 41%, 97%);
   --White: hsl(0, 0%, 100%);
+  --activeState: hsl(173, 61%, 77%);
+  --emptyState: hsl(183, 79%, 24%);
 }

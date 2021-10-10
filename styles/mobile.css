@@ -47,6 +47,8 @@
   display: flex;
   gap: 16px;
   flex-wrap: wrap;
+  max-width: 320px;
+  margin: 0 auto;
 }
 .selectionGroup input[type="radio"] {
   display: none;
@@ -55,6 +57,12 @@
 .selectionGroup input[type="radio"]:checked + label {
   background-color: var(--Strong-cyan);
   color: var(--Very-dark-cyan);
+}
+
+.selectionGroup input[type="radio"] + label:hover {
+  background-color: var(--activeState);
+  color: var(--Very-dark-cyan);
+  cursor: pointer;
 }
 
 /* radio tip selection and custom tip input */
@@ -124,10 +132,15 @@
   display: none;
 }
 
-/* input text fields on focus */
+/* input text fields on focus & hover */
 
 input[type="text"]:focus {
   outline: var(--Strong-cyan) solid 2px;
+}
+
+input[type="text"]:hover {
+  outline: var(--Strong-cyan) solid 2px;
+  cursor: pointer;
 }
 
 /* output section */
@@ -170,7 +183,7 @@ input[type="text"]:focus {
   display: block;
   width: 100%;
   border: none;
-  background-color: var(--Strong-cyan);
+  background-color: var(--emptyState);
   color: var(--Very-dark-cyan);
   font-size: 0.6rem;
   font-weight: 700;
@@ -179,8 +192,27 @@ input[type="text"]:focus {
   border-radius: 5px;
 }
 
+#reset:hover {
+  background-color: var(--activeState);
+}
+
+#reset.normalState {
+  background-color: var(--Strong-cyan);
+}
 #reset:focus {
   background-color: var(--Light-grayish-cyan);
 }
 
-/* TODO: something went wrong with active state colors ( i switched colors ) */
+/* Footer */
+
+.attribution {
+  font-size: 0.5rem;
+  color: var(--Very-dark-cyan);
+  text-align: center;
+  font-weight: 700;
+  padding: 5px 0;
+}
+
+.attribution a {
+  color: var(--Dark-grayish-cyan);
+}

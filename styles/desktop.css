@@ -1,0 +1,60 @@
+@import url(./root.css);
+@media screen and (min-width: 1440px) {
+  .container {
+    margin: 49px auto 20px;
+    max-width: 1440px;
+  }
+
+  .wrapper {
+    max-width: 920px;
+    margin: 0 auto;
+    flex-direction: row;
+    justify-content: space-between;
+    max-height: 481px;
+    padding: 31px 33px;
+    gap: 48px;
+  }
+  form {
+    width: 380px;
+  }
+  .selectionGroup {
+    min-width: 100%;
+    margin: 0;
+    gap: 14px;
+  }
+  .selectionGroup label,
+  .selectionGroup input[type="text"] {
+    width: 117px;
+    height: 48px;
+    font-size: 1rem;
+    line-height: 47px;
+  }
+
+  .output {
+    width: 413px;
+    padding: 57px 41px 38px;
+  }
+
+  .info .title {
+    font-size: 0.7rem;
+  }
+
+  .info span {
+    font-size: 0.6rem;
+  }
+
+  .info .result {
+    font-size: 1.7rem;
+  }
+
+  #reset {
+    margin-top: auto;
+  }
+
+  .attribution {
+    position: fixed;
+    bottom: 10px;
+    left: calc(50% - 271px);
+    font-size: 0.7rem;
+  }
+}
