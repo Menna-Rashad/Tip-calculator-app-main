@@ -6,12 +6,6 @@
   max-width: 375px;
 }
 .container h1 {
-  text-transform: uppercase;
-  letter-spacing: 4px;
-  color: var(--Very-dark-cyan);
-  font-weight: 100;
-  font-size: 1rem;
-  word-break: break-all;
   width: 89px;
   margin: 0 auto 41px;
 }
@@ -126,7 +120,7 @@
   margin-bottom: 10px;
 }
 
-#pplNum span {
+#pplNum #errMsg {
   color: red;
   font-size: 0.6rem;
   display: none;
@@ -183,7 +177,7 @@ input[type="text"]:hover {
   display: block;
   width: 100%;
   border: none;
-  background-color: var(--emptyState);
+  background-color: var(--Strong-cyan);
   color: var(--Very-dark-cyan);
   font-size: 0.6rem;
   font-weight: 700;
@@ -194,6 +188,7 @@ input[type="text"]:hover {
 
 #reset:hover {
   background-color: var(--activeState);
+  cursor: pointer;
 }
 
 #reset.normalState {
@@ -201,6 +196,12 @@ input[type="text"]:hover {
 }
 #reset:focus {
   background-color: var(--Light-grayish-cyan);
+}
+
+#reset:disabled {
+  background-color: var(--disabledState);
+  color: var(--Very-dark-cyan);
+  cursor: not-allowed;
 }
 
 /* Footer */

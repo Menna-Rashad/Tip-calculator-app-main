@@ -25,9 +25,11 @@
   </head>
   <body>
     <div class="container">
-      <h1>splitter</h1>
+      <h1><img src="./images/logo.svg" alt="logo" /></h1>
       <div class="wrapper">
-        <form action="#0">
+        <form id="myForm">
+          <!-- i need a submit button to be able to submit the form by pressing enter -->
+          <input type="submit" style="display: none;"/ >
           <div class="inputWrapper">
             <label for="bill" class="mainLabel">bill</label>
             <div class="inputInnerwrapper">
@@ -36,7 +38,6 @@
                 type="text"
                 name="bill"
                 id="bill"
-                pattern=""
                 placeholder="0"
                 autocomplete="off"
               />
@@ -67,7 +68,7 @@
           <div class="inputWrapper">
             <div id="pplNum">
               <label for="num" class="mainLabel">number of people</label>
-              <span>Can't be zero</span>
+              <span id="errMsg">Can't be zero</span>
             </div>
             <div class="inputInnerwrapper">
               <span><i class="fas fa-user"></i></span>
@@ -75,7 +76,6 @@
                 type="text"
                 name="num"
                 id="num"
-                pattern=""
                 placeholder="0"
                 autocomplete="off"
               />
@@ -97,7 +97,7 @@
             </div>
             <p class="result">$0.00</p>
           </div>
-          <button type="reset" id="reset">reset</button>
+          <button type="reset" id="reset" disabled>reset</button>
         </div>
       </div>
     </div>
