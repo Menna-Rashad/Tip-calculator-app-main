@@ -39,6 +39,7 @@
                 name="bill"
                 id="bill"
                 placeholder="0"
+                oninput="this.value=this.value.replace(/[^\d]/g,'')"
                 autocomplete="off"
               />
             </div>
@@ -59,6 +60,7 @@
               <input
                 type="text"
                 placeholder="custom"
+                oninput="this.value=this.value.replace(/[^\d]/g,'')"
                 name="ratio"
                 id="tipInput"
                 autocomplete="off"
@@ -76,6 +78,7 @@
                 type="text"
                 name="num"
                 id="num"
+                oninput="this.value=this.value.replace(/[^\d]/g, '')"
                 placeholder="0"
                 autocomplete="off"
               />
@@ -88,14 +91,14 @@
               <p>tip amount</p>
               <span>/ person</span>
             </div>
-            <p class="result">$0.00</p>
+            <p class="result" id="tipAmount">$0.00</p>
           </div>
           <div class="info">
             <div class="title">
               <p>total</p>
               <span>/ person</span>
             </div>
-            <p class="result">$0.00</p>
+            <p class="result" id="total">$0.00</p>
           </div>
           <button type="reset" id="reset" disabled>reset</button>
         </div>
