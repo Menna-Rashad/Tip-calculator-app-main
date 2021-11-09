@@ -40,6 +40,8 @@ form.addEventListener("submit", (e) => {
     msg.style.display = "inline";
     //console.log(numOfPeople.style); (to display style properties' names)
     numOfPeople.style.outlineColor = "red";
+    numOfPeople.focus();
+    console.log(numOfPeople.style);
   } else {
     const billValue = Number(bill.value);
     // maybe a function here that returns either tip ratio?
@@ -90,4 +92,8 @@ reset.addEventListener("click", (e) => {
   tipAmount.textContent = `$0.00`;
   const total = document.getElementById("total");
   total.textContent = `$0.00`;
+  reset.disabled = true;
+  const msg = document.querySelector("#errMsg");
+  msg.style.display = "none";
+  numOfPeople.style.outlineColor = "var(--Strong-cyan)";
 });
