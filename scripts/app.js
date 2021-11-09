@@ -54,7 +54,9 @@ form.addEventListener("submit", (e) => {
     const tipAmount = document.getElementById("tipAmount");
     tipAmount.textContent = `$${(billValue * ratio) / 100}`;
     const total = document.getElementById("total");
-    total.textContent = `$${billValue / people + (billValue * ratio) / 100}`;
+    total.textContent = `$${
+      billValue / people + (billValue * ratio) / 100 / people
+    }`;
   }
 });
 
