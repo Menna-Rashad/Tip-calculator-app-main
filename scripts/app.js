@@ -43,6 +43,9 @@ form.addEventListener("submit", (e) => {
     numOfPeople.focus();
     console.log(numOfPeople.style);
   } else {
+    const msg = document.querySelector("#errMsg");
+    msg.style.display = "none";
+    numOfPeople.style.outlineColor = "var(--Strong-cyan)";
     const billValue = Number(bill.value);
     // maybe a function here that returns either tip ratio?
     const ratio = whichRatio(
@@ -52,11 +55,12 @@ form.addEventListener("submit", (e) => {
     const people = Number(numOfPeople.value);
 
     const tipAmount = document.getElementById("tipAmount");
-    tipAmount.textContent = `$${(billValue * ratio) / 100}`;
+    tipAmount.textContent = `$${((billValue * ratio) / 100).toFixed(2)}`;
     const total = document.getElementById("total");
-    total.textContent = `$${
-      billValue / people + (billValue * ratio) / 100 / people
-    }`;
+    total.textContent = `$${(
+      billValue / people +
+      (billValue * ratio) / 100 / people
+    ).toFixed(2)}`;
   }
 });
 
