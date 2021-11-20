@@ -32,8 +32,7 @@ form.addEventListener("change", (e) => {
   reset.disabled = false;
 });
 
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
+numOfPeople.addEventListener("input", (e) => {
   if (!numOfPeople.value || Number(numOfPeople.value) === 0) {
     console.log("can't be zero");
     const msg = document.querySelector("#errMsg");
